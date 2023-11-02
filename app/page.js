@@ -2,10 +2,9 @@
 import { useState } from "react";
 import "./globals.css";
 import Card from "./components/Card";
-// import { motion } from "framer-motion";
 
 const getData = async () => {
-  const temp = await fetch("https://dummyjson.com/users");
+  const temp = await fetch("https://dummyjson.com/users/");
   const data = await temp.json();
   return data.users;
 };
@@ -40,6 +39,8 @@ export default function Home() {
       </div>
 
       {isLoading ? loading : ""}
+
+      {/* {error ? <p className="text-white">Error Encountered</p> : ""} */}
 
       {data ? (
         <div
