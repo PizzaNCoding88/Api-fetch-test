@@ -96,7 +96,7 @@ import "./globals.css";
 import Card from "./components/Card";
 
 const getData = async () => {
-  const temp = await fetch("https://dummyjson.com/ussers/");
+  const temp = await fetch("https://dummyjson.com/users/");
 
   if (temp.ok == true) {
     const data = await temp.json();
